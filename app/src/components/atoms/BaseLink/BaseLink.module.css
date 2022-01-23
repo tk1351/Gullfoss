@@ -1,0 +1,15 @@
+.link {
+    color: #F3F4F6;
+    font-size: 18px;
+}
+
+.linkMorePosts {
+    border: 1px solid #D1D5DB;
+    border-radius: 4px;
+    padding: 10px;
+    transition: all .4s;
+}
+
+.linkMorePosts:hover {
+    font-size: 19px;
+}
