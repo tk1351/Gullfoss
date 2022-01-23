@@ -1,7 +1,7 @@
 import { VFC } from 'react'
 import styles from './BaseLink.module.css'
 
-type LinkState = 'navigation' | 'morePosts'
+export type LinkState = 'navigation' | 'morePosts'
 
 type Props = {
   value: string
