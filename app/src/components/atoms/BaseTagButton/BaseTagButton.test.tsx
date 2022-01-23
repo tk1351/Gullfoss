@@ -3,8 +3,12 @@ import { render, screen } from '@testing-library/react'
 import BaseTagButton from './BaseTagButton'
 
 describe('BaseTagButton', () => {
-  it('labelが正しく表示されている', () => {
+  it('buttonが正しく表示されている', () => {
     render(<BaseTagButton label={'Label'} />)
-    expect(screen.getByText('Label')).toBeInTheDocument()
+    expect(screen.getByRole('button')).toBeInTheDocument()
+  })
+  it('propsとして渡ってくるlabelが正しく表示されている', () => {
+    render(<BaseTagButton label={'Label'} />)
+    expect(screen.getByRole('button', { name: 'Label' })).toBeInTheDocument()
   })
 })
