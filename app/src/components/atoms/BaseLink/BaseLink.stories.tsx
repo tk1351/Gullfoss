@@ -21,3 +21,10 @@ MorePostsLink.args = {
   value: 'See more posts',
   state: 'morePosts',
 }
+
+export const CheckedLink = Template.bind({})
+CheckedLink.args = {
+  value: 'Checked',
+  state: 'navigation',
+  checked: true,
+}

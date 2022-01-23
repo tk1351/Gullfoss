@@ -13,3 +13,7 @@
 .linkMorePosts:hover {
     font-size: 19px;
 }
+
+.checkedLink {
+    color: #3BE2D3;
+}
