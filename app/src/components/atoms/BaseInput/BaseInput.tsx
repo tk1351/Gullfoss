@@ -1,4 +1,5 @@
 import {
+  ChangeEvent,
   DetailedHTMLProps,
   HTMLInputTypeAttribute,
   InputHTMLAttributes,
@@ -9,6 +10,8 @@ import styles from './BaseInput.module.css'
 type Props = {
   type: HTMLInputTypeAttribute | undefined
   placeholder: string
+  value: string
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void
   width?: number
   height?: number
 } & DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
@@ -16,6 +19,8 @@ type Props = {
 const BaseInput: VFC<Props> = ({
   type,
   placeholder,
+  value,
+  onChange,
   width,
   height,
   ...props
@@ -25,6 +30,8 @@ const BaseInput: VFC<Props> = ({
     <input
       type={type}
       placeholder={placeholder}
+      value={value}
+      onChange={onChange}
       style={
         width && height ? { width: `${width}px`, height: `${height}px` } : {}
       }

@@ -6,6 +6,8 @@ const setup = (width: number, height: number) => {
     <BaseInput
       placeholder={'placeholder'}
       type={'text'}
+      value={'Test'}
+      onChange={jest.fn()}
       width={width}
       height={height}
     />
@@ -30,8 +32,9 @@ describe('BaseInput', () => {
     expect(input).toHaveClass('input')
   })
   it('正しいpropsが渡っている', () => {
-    setup(width, height)
+    const { input } = setup(width, height)
     expect(screen.getByPlaceholderText('placeholder')).toBeTruthy()
+    expect(input).toHaveValue('Test')
   })
   it('widthとheightがpropsにある場合はstyleが付与される', () => {
     const { input } = setup(width, height)
