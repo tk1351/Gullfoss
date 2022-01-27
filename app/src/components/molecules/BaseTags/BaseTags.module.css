@@ -1,0 +1,6 @@
+/*TODO widthとheightを修正*/
+.list {
+    max-width: 500px;
+    min-height: 100%;
+    display: flex;
+}
