@@ -1,0 +1,15 @@
+.nav {
+    width: 100vw;
+    height: 40px;
+    border-top: 4px solid #DC745E;
+}
+
+.list {
+    width: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0 50px;
+}
