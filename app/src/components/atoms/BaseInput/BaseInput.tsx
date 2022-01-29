@@ -12,8 +12,8 @@ type Props = {
   placeholder: string
   value: string
   onChange: (event: ChangeEvent<HTMLInputElement>) => void
-  width?: number
-  height?: number
+  width?: string
+  height?: string
 } & DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
 
 const BaseInput: VFC<Props> = ({
@@ -32,9 +32,7 @@ const BaseInput: VFC<Props> = ({
       placeholder={placeholder}
       value={value}
       onChange={onChange}
-      style={
-        width && height ? { width: `${width}px`, height: `${height}px` } : {}
-      }
+      style={width && height ? { width: `${width}`, height: `${height}` } : {}}
       className={input}
       {...props}
     />

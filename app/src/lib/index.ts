@@ -13,3 +13,16 @@ export const footerLinks: FALink[] = [
   { icon: faTwitter, href: '#' },
   { icon: faGithub, href: '#' },
 ]
+
+export const items: { title: string; date: string }[] = [
+  { title: 'post', date: '2022-01-01' },
+  { title: 'post', date: '2022-01-01' },
+  { title: 'post', date: '2022-01-01' },
+  { title: 'post', date: '2022-01-01' },
+  { title: 'post', date: '2022-01-01' },
+  { title: 'post', date: '2022-01-01' },
+  { title: 'post', date: '2022-01-01' },
+  { title: 'post', date: '2022-01-01' },
+  { title: 'post', date: '2022-01-01' },
+  { title: 'post', date: '2022-01-01' },
+]

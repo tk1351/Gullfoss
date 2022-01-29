@@ -13,6 +13,10 @@ describe('BaseForm', () => {
     render(<BaseForm />)
     expect(screen.getByRole('textbox')).toBeInTheDocument()
   })
+  it('正しくclassが付与されていること', () => {
+    render(<BaseForm />)
+    expect(screen.getByRole('form')).toHaveClass('form')
+  })
   it('formに文字を正しく入力できること', () => {
     render(<BaseForm />)
     userEvent.type(screen.getByRole('textbox'), 'query')

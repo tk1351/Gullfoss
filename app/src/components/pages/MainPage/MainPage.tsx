@@ -1,20 +1,9 @@
 import { VFC } from 'react'
 import MainView from '../../templates/MainView/MainView'
+import { items } from '../../../lib'
 
 const MainPage: VFC = () => {
-  const items: { title: string; date: string }[] = [
-    { title: 'post', date: '2022-01-01' },
-    { title: 'post', date: '2022-01-01' },
-    { title: 'post', date: '2022-01-01' },
-    { title: 'post', date: '2022-01-01' },
-    { title: 'post', date: '2022-01-01' },
-    { title: 'post', date: '2022-01-01' },
-    { title: 'post', date: '2022-01-01' },
-    { title: 'post', date: '2022-01-01' },
-    { title: 'post', date: '2022-01-01' },
-    { title: 'post', date: '2022-01-01' },
-  ]
-  return <MainView heading={'Posts'} items={items} />
+  return <MainView heading={'Latest Posts'} items={items} />
 }
 
 export default MainPage

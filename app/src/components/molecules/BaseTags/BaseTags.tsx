@@ -7,11 +7,11 @@ type Props = {
 }
 
 const BaseTags: VFC<Props> = ({ tags }) => {
-  const { list } = styles
+  const { list, tagItem } = styles
   return (
     <ul className={list}>
       {tags.map((tag, index) => (
-        <li key={index}>
+        <li key={index} className={tagItem}>
           <a href='#'>
             <BaseTagButton label={tag} />
           </a>

@@ -3,6 +3,7 @@ import BaseHeader from '../../components/organisms/BaseHeader/BaseHeader'
 import Head from 'next/head'
 import { footerLinks, headerLinks } from '../../lib'
 import BaseFooter from '../../components/organisms/BaseFooter/BaseFooter'
+import PostsPage from '../../components/pages/PostsPage/PostsPage'
 
 const Posts: NextPage = () => {
   return (
@@ -13,7 +14,7 @@ const Posts: NextPage = () => {
       </Head>
       <main>
         <BaseHeader links={headerLinks} />
-        <p>Posts</p>
+        <PostsPage />
       </main>
       <BaseFooter links={footerLinks} />
     </div>
