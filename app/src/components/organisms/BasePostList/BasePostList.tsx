@@ -7,12 +7,13 @@ type Props = {
     title: string
     date: string
   }[]
+  posts?: boolean
 }
 
-const BasePostList: VFC<Props> = ({ items }) => {
-  const { articleList } = styles
+const BasePostList: VFC<Props> = ({ items, posts }) => {
+  const { articleList, postsPage } = styles
   return (
-    <ul className={articleList}>
+    <ul className={`${articleList} ${posts && postsPage}`}>
       {items.map((item, index) => (
         <BaseItem title={item.title} date={item.date} key={index} />
       ))}

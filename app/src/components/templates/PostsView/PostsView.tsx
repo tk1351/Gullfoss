@@ -1,6 +1,5 @@
 import { VFC } from 'react'
 import BaseHeading2 from '../../atoms/BaseHeading2/BaseHeading2'
-import BaseItem from '../../molecules/BaseItem/BaseItem'
 import styles from './PostsView.module.css'
 import BaseForm from '../../molecules/BaseForm/BaseForm'
 import BaseTags from '../../molecules/BaseTags/BaseTags'
@@ -21,7 +20,7 @@ const PostsView: VFC<Props> = ({ heading, items }) => {
       <BaseHeading2 text={heading} />
       <BaseForm />
       <BaseTags tags={['Angular', 'React', 'Vue', 'Svelte']} />
-      <BasePostList items={items} />
+      <BasePostList items={items} posts />
     </div>
   )
 }

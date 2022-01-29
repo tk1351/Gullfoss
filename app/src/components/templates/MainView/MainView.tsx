@@ -2,6 +2,7 @@ import { VFC } from 'react'
 import styles from './MainView.module.css'
 import BaseHeading2 from '../../atoms/BaseHeading2/BaseHeading2'
 import BasePostList from '../../organisms/BasePostList/BasePostList'
+import BaseLink from '../../atoms/BaseLink/BaseLink'
 
 type Props = {
   heading: string
@@ -17,6 +18,7 @@ const MainView: VFC<Props> = ({ heading, items }) => {
     <div className={wrapper}>
       <BaseHeading2 text={heading} />
       <BasePostList items={items} />
+      <BaseLink value='See more posts' href={'/posts'} state='morePosts' />
     </div>
   )
 }

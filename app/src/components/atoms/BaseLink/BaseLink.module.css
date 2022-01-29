@@ -4,14 +4,13 @@
 }
 
 .linkMorePosts {
+    width: 30%;
+    height: 50px;
     border: 1px solid #D1D5DB;
     border-radius: 4px;
-    padding: 10px;
-    transition: all .4s;
-}
-
-.linkMorePosts:hover {
-    font-size: 19px;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 30px;
 }
 
 .checkedLink {

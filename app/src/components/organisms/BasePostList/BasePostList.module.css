@@ -1,7 +1,10 @@
 .articleList {
-    height: 500px;
+    height: 530px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.postsPage {
     margin-bottom: 30px;
 }
