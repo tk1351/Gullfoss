@@ -1,9 +1,7 @@
 import { VFC } from 'react'
-import { IconDefinition } from '@fortawesome/free-solid-svg-icons'
 import styles from './BaseFooter.module.css'
 import BaseSNSLink from '../../atoms/BaseSNSLink/BaseSNSLink'
-
-type FALink = { icon: IconDefinition; href: string }
+import { FALink } from '../../../types'
 
 type Props = {
   links: FALink[]
