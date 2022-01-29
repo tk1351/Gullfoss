@@ -1,4 +1,5 @@
-import { Link } from '../types'
+import { FALink, Link } from '../types'
+import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 export const headerLinks: Link[] = [
   {
@@ -6,4 +7,9 @@ export const headerLinks: Link[] = [
     href: '/',
   },
   { value: 'Posts', href: '/posts' },
+]
+
+export const footerLinks: FALink[] = [
+  { icon: faTwitter, href: '#' },
+  { icon: faGithub, href: '#' },
 ]
