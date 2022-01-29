@@ -11,9 +11,11 @@ type Props = {
 const BaseItem: VFC<Props> = ({ title, date }) => {
   const { item } = styles
   return (
-    <li className={item}>
-      <BaseHeading4 text={title} />
-      <BaseDate date={date} />
+    <li>
+      <article className={item}>
+        <BaseHeading4 text={title} />
+        <BaseDate date={date} />
+      </article>
     </li>
   )
 }
