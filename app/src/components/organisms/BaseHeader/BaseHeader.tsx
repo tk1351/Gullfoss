@@ -1,9 +1,10 @@
 import { VFC } from 'react'
 import BaseLink from '../../atoms/BaseLink/BaseLink'
 import styles from './BaseHeader.module.css'
+import { Link } from '../../../types'
 
 type Props = {
-  links: string[]
+  links: Link[]
 }
 
 const BaseHeader: VFC<Props> = ({ links }) => {
@@ -13,7 +14,11 @@ const BaseHeader: VFC<Props> = ({ links }) => {
       <ul className={list}>
         {links.map((link, index) => (
           <li key={index} className={listItem}>
-            <BaseLink value={link} state={'navigation'} />
+            <BaseLink
+              value={link.value}
+              href={link.href}
+              state={'navigation'}
+            />
           </li>
         ))}
       </ul>
