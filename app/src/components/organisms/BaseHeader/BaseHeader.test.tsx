@@ -33,8 +33,11 @@ describe('BaseHeader', () => {
     expect(screen.getByRole('link', { name: 'Posts' })).toBeInTheDocument()
   })
   it('正しいclassが付与されていること', () => {
-    const { nav, ul } = setup()
+    const { nav, ul, lists } = setup()
     expect(nav).toHaveClass('nav')
     expect(ul).toHaveClass('list')
+    lists.forEach((list) => {
+      expect(list).toHaveClass('listItem')
+    })
   })
 })
