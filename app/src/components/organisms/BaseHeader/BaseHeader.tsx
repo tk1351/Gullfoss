@@ -7,12 +7,12 @@ type Props = {
 }
 
 const BaseHeader: VFC<Props> = ({ links }) => {
-  const { nav, list } = styles
+  const { nav, list, listItem } = styles
   return (
     <nav className={nav}>
       <ul className={list}>
         {links.map((link, index) => (
-          <li key={index}>
+          <li key={index} className={listItem}>
             <BaseLink value={link} state={'navigation'} />
           </li>
         ))}
