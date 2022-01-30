@@ -4,8 +4,23 @@ import MainPage from '../components/pages/MainPage/MainPage'
 import BaseHeader from '../components/organisms/BaseHeader/BaseHeader'
 import BaseFooter from '../components/organisms/BaseFooter/BaseFooter'
 import { footerLinks, headerLinks } from '../lib'
+import { useEffect } from 'react'
+import axios from 'axios'
 
 const Home: NextPage = () => {
+  useEffect(() => {
+    ;(async () => {
+      const { data } = await axios.get(
+        `${process.env.NEXT_PUBLIC_MICRO_CMS_API_URL}/posts`,
+        {
+          headers: {
+            'X-MICROCMS-API-KEY': `${process.env.NEXT_PUBLIC_MICRO_CMS_API_KEY}`,
+          },
+        }
+      )
+      console.log('data', data)
+    })()
+  }, [])
   return (
     <div>
       <Head>
