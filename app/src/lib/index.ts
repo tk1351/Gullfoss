@@ -26,3 +26,5 @@ export const items: { title: string; date: string }[] = [
   { title: 'golang', date: '2022-01-01' },
   { title: 'foo', date: '2022-01-01' },
 ]
+
+export const tags: string[] = ['Angular', 'React', 'Vue', 'Svelte']

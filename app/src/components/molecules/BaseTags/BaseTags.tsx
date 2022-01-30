@@ -1,4 +1,5 @@
 import { VFC } from 'react'
+import Link from 'next/link'
 import BaseTagButton from '../../atoms/BaseTagButton/BaseTagButton'
 import styles from './BaseTags.module.css'
 
@@ -12,9 +13,11 @@ const BaseTags: VFC<Props> = ({ tags }) => {
     <ul className={list}>
       {tags.map((tag, index) => (
         <li key={index} className={tagItem}>
-          <a href='#'>
-            <BaseTagButton label={tag} />
-          </a>
+          <Link href={`/category/${tag}`}>
+            <a>
+              <BaseTagButton label={tag} />
+            </a>
+          </Link>
         </li>
       ))}
     </ul>
