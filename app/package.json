@@ -8,9 +8,11 @@
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "test": "jest"
+    "test": "jest",
+    "aspida:build": "aspida"
   },
   "dependencies": {
+    "@aspida/axios": "^1.7.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
