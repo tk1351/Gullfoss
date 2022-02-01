@@ -1,11 +1,12 @@
-import { NextPage } from 'next'
+import { InferGetStaticPropsType, NextPage } from 'next'
 import BaseHeader from '../../components/organisms/BaseHeader/BaseHeader'
 import Head from 'next/head'
 import { footerLinks, headerLinks } from '../../lib'
 import BaseFooter from '../../components/organisms/BaseFooter/BaseFooter'
 import PostsPage from '../../components/pages/PostsPage/PostsPage'
+import { client } from '../../api'
 
-const Posts: NextPage = () => {
+const Posts: NextPage<Props> = ({ posts }) => {
   return (
     <div>
       <Head>
@@ -14,11 +15,21 @@ const Posts: NextPage = () => {
       </Head>
       <main>
         <BaseHeader links={headerLinks} />
-        <PostsPage />
+        <PostsPage posts={posts} />
       </main>
       <BaseFooter links={footerLinks} />
     </div>
   )
 }
+
+export const getStaticProps = async () => {
+  const posts = await client.v1.posts.$get()
+
+  return {
+    props: { posts },
+  }
+}
+
+type Props = InferGetStaticPropsType<typeof getStaticProps>
 
 export default Posts
