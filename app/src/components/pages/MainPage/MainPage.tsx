@@ -1,9 +1,14 @@
 import { VFC } from 'react'
 import MainView from '../../templates/MainView/MainView'
-import { items } from '../../../lib'
+import { CommonList } from '../../../api/types'
+import { PostItem } from '../../../api/v1/posts'
 
-const MainPage: VFC = () => {
-  return <MainView heading={'Latest Posts'} items={items} />
+type Props = {
+  posts: CommonList<PostItem>
+}
+
+const MainPage: VFC<Props> = ({ posts }) => {
+  return <MainView heading={'Latest Posts'} posts={posts} />
 }
 
 export default MainPage
