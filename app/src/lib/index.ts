@@ -40,6 +40,13 @@ export const mockTagItems: TagItem[] = [
     tag: 'React',
   },
   {
+    id: 'docker',
+    createdAt: '2022-01-01',
+    updatedAt: '2022-01-01',
+    publishedAt: '2022-01-01',
+    tag: 'Docker',
+  },
+  {
     id: 'angular',
     createdAt: '2022-01-01',
     updatedAt: '2022-01-01',

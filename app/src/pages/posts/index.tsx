@@ -6,7 +6,7 @@ import BaseFooter from '../../components/organisms/BaseFooter/BaseFooter'
 import PostsPage from '../../components/pages/PostsPage/PostsPage'
 import { client } from '../../api'
 
-const Posts: NextPage<Props> = ({ posts }) => {
+const Posts: NextPage<Props> = ({ posts, tags }) => {
   return (
     <div>
       <Head>
@@ -15,7 +15,7 @@ const Posts: NextPage<Props> = ({ posts }) => {
       </Head>
       <main>
         <BaseHeader links={headerLinks} />
-        <PostsPage posts={posts} />
+        <PostsPage posts={posts} tags={tags} />
       </main>
       <BaseFooter links={footerLinks} />
     </div>
@@ -24,9 +24,10 @@ const Posts: NextPage<Props> = ({ posts }) => {
 
 export const getStaticProps = async () => {
   const posts = await client.v1.posts.$get()
+  const tags = await client.v1.tags.$get()
 
   return {
-    props: { posts },
+    props: { posts, tags },
   }
 }
 
