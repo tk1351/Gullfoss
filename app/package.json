@@ -9,7 +9,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "jest",
-    "aspida:build": "aspida"
+    "aspida:build": "aspida && aspida-mock"
   },
   "dependencies": {
     "@aspida/axios": "^1.7.1",
