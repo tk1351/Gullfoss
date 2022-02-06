@@ -171,3 +171,14 @@ export const mockPostItems: PostItem[] = [
     tags: mockTagItems,
   },
 ]
+
+export const mockItem: PostItem = {
+  id: '12kfdjasdg',
+  createdAt: '2022-01-01',
+  updatedAt: '2022-01-01',
+  publishedAt: '2022-01-01',
+  title: 'mock title',
+  subTitle: 'mock sub title',
+  content: '<div>mock content</div>',
+  tags: mockTagItems,
+}
