@@ -14,7 +14,7 @@ const BasePost: VFC<Props> = ({ title, date, description }) => {
     <div aria-label='post' className='post'>
       <BaseHeading1 text={title} />
       <BaseDate date={date} />
-      <BaseDescription text={description} />
+      <BaseDescription body={description} />
     </div>
   )
 }

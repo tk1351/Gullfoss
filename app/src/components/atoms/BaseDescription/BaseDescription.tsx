@@ -2,15 +2,19 @@ import { VFC } from 'react'
 import styles from './BaseDescription.module.css'
 
 type Props = {
-  text: string
+  body: string
 }
 
-const BaseDescription: VFC<Props> = ({ text }) => {
+const BaseDescription: VFC<Props> = ({ body }) => {
   const { description } = styles
   return (
-    <p aria-label='description' className={description}>
-      {text}
-    </p>
+    <div
+      aria-label='description'
+      className={description}
+      dangerouslySetInnerHTML={{
+        __html: body,
+      }}
+    />
   )
 }
 

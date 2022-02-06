@@ -12,5 +12,5 @@ const Template: ComponentStory<typeof BaseDescription> = (args) => (
 
 export const Description = Template.bind({})
 Description.args = {
-  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat, arcu in cursus tincidunt, lacus turpis tincidunt lacus, vel mollis.',
+  body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat, arcu in cursus tincidunt, lacus turpis tincidunt lacus, vel mollis.',
 }

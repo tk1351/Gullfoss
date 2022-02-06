@@ -29,7 +29,7 @@ const PostView: VFC<Props> = ({ post }) => {
       <BaseHeading1 text={title} />
       <BaseDate date={createdAt} />
       <BaseTags tags={orderedTags} />
-      <BaseDescription text={content} />
+      <BaseDescription body={content} />
     </div>
   )
 }
