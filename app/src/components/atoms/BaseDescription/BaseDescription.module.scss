@@ -1,0 +1,13 @@
+.description {
+    color: #F3F4F6;
+    & > h2 {
+        font-size: 24px;
+        font-weight: bold;
+        border-bottom: 1px solid #F3F4F6;
+    }
+
+    & > p {
+      line-height: 1.8;
+      letter-spacing: 0.2px;
+    }
+}

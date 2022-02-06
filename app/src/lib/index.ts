@@ -179,6 +179,7 @@ export const mockItem: PostItem = {
   publishedAt: '2022-01-01',
   title: 'mock title',
   subTitle: 'mock sub title',
-  content: '<div><h2>mock heading</h2><p>mock content</p></div>',
+  content:
+    '<h2>mock heading</h2><p>mock content</p><p>mock content</p><p>mock content</p><p>mock content</p><p>mock content</p><h2>mock heading</h2>',
   tags: mockTagItems,
 }

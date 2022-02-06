@@ -1,5 +1,5 @@
 import { VFC } from 'react'
-import styles from './BaseDescription.module.css'
+import styles from './BaseDescription.module.scss'
 
 type Props = {
   body: string
