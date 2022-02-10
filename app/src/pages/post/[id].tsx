@@ -51,7 +51,9 @@ export const getStaticProps: GetStaticProps<
   { post: PostItem },
   Params
 > = async (context) => {
-  const post = await client.v1.posts._postId(context.params!.id).$get()
+  const post = await client.v1.posts
+    ._postId(encodeURI(context.params!.id))
+    .$get()
   return {
     props: { post },
   }

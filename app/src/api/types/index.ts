@@ -3,6 +3,7 @@ export interface CommonItem {
   createdAt: string
   updatedAt: string
   publishedAt: string
+  revisedAt: string
 }
 
 export interface CommonList<T> {

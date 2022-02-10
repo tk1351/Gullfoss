@@ -15,7 +15,12 @@ const BasePostList: VFC<Props> = ({ items, posts }) => {
   return (
     <ul className={`${articleList} ${posts && postsPage}`}>
       {contents.map((content, index) => (
-        <BaseItem title={content.title} date={content.createdAt} key={index} />
+        <BaseItem
+          id={content.id}
+          title={content.title}
+          date={content.createdAt}
+          key={index}
+        />
       ))}
     </ul>
   )

@@ -12,6 +12,7 @@ const Template: ComponentStory<typeof BaseItem> = (args) => (
 
 export const Item = Template.bind({})
 Item.args = {
+  id: 'post-id',
   title: 'Post Title',
   date: '2022-01-01',
 }

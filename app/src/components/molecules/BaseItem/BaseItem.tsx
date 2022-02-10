@@ -5,16 +5,17 @@ import BaseDate from '../../atoms/BaseDate/BaseDate'
 import styles from './BaseItem.module.css'
 
 type Props = {
+  id: string
   title: string
   date: string
 }
 
-const BaseItem: VFC<Props> = ({ title, date }) => {
+const BaseItem: VFC<Props> = ({ id, title, date }) => {
   const { item } = styles
   return (
     <li>
       <article>
-        <Link href={`/post/${title}`}>
+        <Link href={`/post/${id}`}>
           <a className={item}>
             <BaseHeading4 text={title} />
             <BaseDate date={date} />

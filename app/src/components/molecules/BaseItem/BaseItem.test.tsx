@@ -2,7 +2,9 @@ import { render, screen } from '@testing-library/react'
 import BaseItem from './BaseItem'
 
 const setup = () => {
-  const utils = render(<BaseItem title={'Post Title'} date={'2022-01-01'} />)
+  const utils = render(
+    <BaseItem id={'post-id'} title={'Post Title'} date={'2022-01-01'} />
+  )
   const listItem = utils.getByRole('listitem')
   const article = utils.getByRole('article')
   const title = utils.getByRole('heading')

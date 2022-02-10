@@ -16,20 +16,22 @@ type Props = {
 const PostView: VFC<Props> = ({ post }) => {
   const { wrapper } = styles
 
-  const { title, createdAt, tags, content } = post
+  console.log(post)
 
-  const orderedTags: CommonList<TagItem> = {
-    contents: tags,
-    totalCount: tags.length,
-    offset: 0,
-    limit: 10,
-  }
+  // const { title, createdAt, tags, content } = post
+  //
+  // const orderedTags: CommonList<TagItem> = {
+  //   contents: tags,
+  //   totalCount: tags.length,
+  //   offset: 0,
+  //   limit: 10,
+  // }
   return (
     <div className={wrapper}>
-      <BaseHeading1 text={title} />
-      <BaseDate date={createdAt} />
-      <BaseTags tags={orderedTags} />
-      <BaseDescription body={content} />
+      {/*<BaseHeading1 text={title} />*/}
+      {/*<BaseDate date={createdAt} />*/}
+      {/*<BaseTags tags={orderedTags} />*/}
+      {/*<BaseDescription body={content} />*/}
     </div>
   )
 }

@@ -2,6 +2,7 @@ import { FALink, Link } from '../types'
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { PostItem } from '../api/v1/posts'
 import { TagItem } from '../api/v1/tags'
+import { CommonList } from '../api/types'
 
 export const headerLinks: Link[] = [
   {
@@ -37,6 +38,7 @@ export const mockTagItems: TagItem[] = [
     createdAt: '2022-01-01',
     updatedAt: '2022-01-01',
     publishedAt: '2022-01-01',
+    revisedAt: '2022-01-01',
     tag: 'React',
   },
   {
@@ -44,6 +46,7 @@ export const mockTagItems: TagItem[] = [
     createdAt: '2022-01-01',
     updatedAt: '2022-01-01',
     publishedAt: '2022-01-01',
+    revisedAt: '2022-01-01',
     tag: 'Docker',
   },
   {
@@ -51,6 +54,7 @@ export const mockTagItems: TagItem[] = [
     createdAt: '2022-01-01',
     updatedAt: '2022-01-01',
     publishedAt: '2022-01-01',
+    revisedAt: '2022-01-01',
     tag: 'Angular',
   },
   {
@@ -58,6 +62,7 @@ export const mockTagItems: TagItem[] = [
     createdAt: '2022-01-01',
     updatedAt: '2022-01-01',
     publishedAt: '2022-01-01',
+    revisedAt: '2022-01-01',
     tag: 'Vue',
   },
   {
@@ -65,6 +70,7 @@ export const mockTagItems: TagItem[] = [
     createdAt: '2022-01-01',
     updatedAt: '2022-01-01',
     publishedAt: '2022-01-01',
+    revisedAt: '2022-01-01',
     tag: 'Svelte',
   },
 ]
@@ -75,6 +81,7 @@ export const mockPostItems: PostItem[] = [
     createdAt: '2022-01-01',
     updatedAt: '2022-01-01',
     publishedAt: '2022-01-01',
+    revisedAt: '2022-01-01',
     title: 'lorem',
     subTitle: 'lorem',
     content: '<div>lorem</div>',
@@ -85,6 +92,7 @@ export const mockPostItems: PostItem[] = [
     createdAt: '2022-01-01',
     updatedAt: '2022-01-01',
     publishedAt: '2022-01-01',
+    revisedAt: '2022-01-01',
     title: 'ipsum',
     subTitle: 'ipsum',
     content: '<div>ipsum</div>',
@@ -95,6 +103,7 @@ export const mockPostItems: PostItem[] = [
     createdAt: '2022-01-01',
     updatedAt: '2022-01-01',
     publishedAt: '2022-01-01',
+    revisedAt: '2022-01-01',
     title: 'dolor',
     subTitle: 'dolor',
     content: '<div>dolor</div>',
@@ -105,6 +114,7 @@ export const mockPostItems: PostItem[] = [
     createdAt: '2022-01-01',
     updatedAt: '2022-01-01',
     publishedAt: '2022-01-01',
+    revisedAt: '2022-01-01',
     title: 'sit',
     subTitle: 'sit',
     content: '<div>sit</div>',
@@ -115,6 +125,7 @@ export const mockPostItems: PostItem[] = [
     createdAt: '2022-01-01',
     updatedAt: '2022-01-01',
     publishedAt: '2022-01-01',
+    revisedAt: '2022-01-01',
     title: 'amet',
     subTitle: 'amet',
     content: '<div>amet</div>',
@@ -125,6 +136,7 @@ export const mockPostItems: PostItem[] = [
     createdAt: '2022-01-01',
     updatedAt: '2022-01-01',
     publishedAt: '2022-01-01',
+    revisedAt: '2022-01-01',
     title: 'consectetur',
     subTitle: 'consectetur',
     content: '<div>consectetur</div>',
@@ -135,6 +147,7 @@ export const mockPostItems: PostItem[] = [
     createdAt: '2022-01-01',
     updatedAt: '2022-01-01',
     publishedAt: '2022-01-01',
+    revisedAt: '2022-01-01',
     title: 'adipiscing',
     subTitle: 'adipiscing',
     content: '<div>adipiscing</div>',
@@ -145,6 +158,7 @@ export const mockPostItems: PostItem[] = [
     createdAt: '2022-01-01',
     updatedAt: '2022-01-01',
     publishedAt: '2022-01-01',
+    revisedAt: '2022-01-01',
     title: 'elit',
     subTitle: 'elit',
     content: '<div>elit</div>',
@@ -155,6 +169,7 @@ export const mockPostItems: PostItem[] = [
     createdAt: '2022-01-01',
     updatedAt: '2022-01-01',
     publishedAt: '2022-01-01',
+    revisedAt: '2022-01-01',
     title: 'aenean',
     subTitle: 'aenean',
     content: '<div>aenean</div>',
@@ -165,6 +180,7 @@ export const mockPostItems: PostItem[] = [
     createdAt: '2022-01-01',
     updatedAt: '2022-01-01',
     publishedAt: '2022-01-01',
+    revisedAt: '2022-01-01',
     title: 'tincidunt',
     subTitle: 'tincidunt',
     content: '<div>tincidunt</div>',
@@ -177,9 +193,17 @@ export const mockItem: PostItem = {
   createdAt: '2022-01-01',
   updatedAt: '2022-01-01',
   publishedAt: '2022-01-01',
+  revisedAt: '2022-01-01',
   title: 'mock title',
   subTitle: 'mock sub title',
   content:
     '<h2>mock heading</h2><p>mock content</p><p>mock content</p><p>mock content</p><p>mock content</p><p>mock content</p><h2>mock heading</h2>',
   tags: mockTagItems,
+}
+
+export const mockItems: CommonList<PostItem> = {
+  contents: mockPostItems,
+  totalCount: 10,
+  offset: 0,
+  limit: 10,
 }
