@@ -9,12 +9,14 @@ const setup = () => {
   const article = utils.getByRole('article')
   const title = utils.getByRole('heading')
   const date = utils.getByLabelText('post-date')
+  const link = utils.getByRole('link')
   return {
     ...utils,
     listItem,
     article,
     title,
     date,
+    link,
   }
 }
 
@@ -36,7 +38,7 @@ describe('BaseItem', () => {
     expect(date).toBeInTheDocument()
   })
   it('正しいclassが付与されていること', () => {
-    const { article } = setup()
-    expect(article).toHaveClass('item')
+    const { link } = setup()
+    expect(link).toHaveClass('item')
   })
 })

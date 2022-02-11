@@ -207,3 +207,15 @@ export const mockItems: CommonList<PostItem> = {
   offset: 0,
   limit: 10,
 }
+
+export const mockTags: CommonList<TagItem> = {
+  contents: mockTagItems,
+  totalCount: 10,
+  offset: 0,
+  limit: 10,
+}
+
+export const mockLinks: Link[] = [
+  { value: 'a', href: '/a' },
+  { value: 'b', href: '/b' },
+]

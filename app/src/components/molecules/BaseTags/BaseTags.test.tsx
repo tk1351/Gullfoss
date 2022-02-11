@@ -1,8 +1,9 @@
 import { render, screen } from '@testing-library/react'
 import BaseTags from './BaseTags'
+import { mockTags } from '../../../lib'
 
 const setup = () => {
-  const utils = render(<BaseTags tags={['React', 'Vue']} />)
+  const utils = render(<BaseTags tags={mockTags} />)
   const list = utils.getByRole('list')
   const listitems = utils.getAllByRole('listitem')
   const links = utils.getAllByRole('link')
@@ -23,20 +24,15 @@ describe('BaseTags', () => {
   })
   it('liタグが存在すること', () => {
     const { listitems } = setup()
-    expect(listitems).toHaveLength(2)
+    expect(listitems).toHaveLength(mockTags.contents.length)
   })
   it('aタグが存在すること', () => {
     const { links } = setup()
-    expect(links).toHaveLength(2)
+    expect(links).toHaveLength(mockTags.contents.length)
   })
   it('buttonタグが存在すること', () => {
     const { buttons } = setup()
-    expect(buttons).toHaveLength(2)
-  })
-  it('propsが正しく渡っていること', () => {
-    setup()
-    expect(screen.getByRole('button', { name: 'React' })).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: 'Vue' })).toBeInTheDocument()
+    expect(buttons).toHaveLength(mockTags.contents.length)
   })
   it('正しくclassが付与されていること', () => {
     const { list } = setup()

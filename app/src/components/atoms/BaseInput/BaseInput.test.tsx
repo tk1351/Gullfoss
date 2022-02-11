@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import BaseInput from './BaseInput'
 
-const setup = (width: number, height: number) => {
+const setup = (width: string, height: string) => {
   const utils = render(
     <BaseInput
       placeholder={'placeholder'}
@@ -19,8 +19,8 @@ const setup = (width: number, height: number) => {
   }
 }
 
-const width = 400
-const height = 30
+const width = '400px'
+const height = '30px'
 
 describe('BaseInput', () => {
   it('inputタグが存在する', () => {
@@ -38,6 +38,6 @@ describe('BaseInput', () => {
   })
   it('widthとheightがpropsにある場合はstyleが付与される', () => {
     const { input } = setup(width, height)
-    expect(input).toHaveStyle(`width: ${width}px; height: ${height}px;`)
+    expect(input).toHaveStyle(`width: ${width}; height: ${height};`)
   })
 })

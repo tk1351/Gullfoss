@@ -1,8 +1,9 @@
 import { render, screen } from '@testing-library/react'
 import BaseHeader from './BaseHeader'
+import { mockLinks } from '../../../lib'
 
 const setup = () => {
-  const utils = render(<BaseHeader links={['Home', 'Posts']} />)
+  const utils = render(<BaseHeader links={mockLinks} />)
   const nav = utils.getByRole('navigation')
   const ul = utils.getByRole('list')
   const lists = utils.getAllByRole('listitem')
@@ -29,8 +30,8 @@ describe('BaseHeader', () => {
   })
   it('aタグが存在すること', () => {
     setup()
-    expect(screen.getByRole('link', { name: 'Home' })).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: 'Posts' })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: 'a' })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: 'b' })).toBeInTheDocument()
   })
   it('正しいclassが付与されていること', () => {
     const { nav, ul, lists } = setup()
