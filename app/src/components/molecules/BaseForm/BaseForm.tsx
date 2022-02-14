@@ -1,16 +1,21 @@
 import { FormEvent, VFC } from 'react'
+import { useRouter } from 'next/router'
 import BaseInput from '../../atoms/BaseInput/BaseInput'
 import { useInput } from '../../../hooks/useInput'
 import styles from './BaseForm.module.css'
 
 const BaseForm: VFC = () => {
+  const router = useRouter()
   const { form } = styles
   const { value, onChange } = useInput()
 
-  const onSubmit = (event: FormEvent<HTMLFormElement>, query: string) => {
+  const onSubmit = async (event: FormEvent<HTMLFormElement>, query: string) => {
     event.preventDefault()
     if (!query) return
-    console.log(query)
+    await router.push({
+      pathname: '/posts/[query]',
+      query: { query },
+    })
   }
   return (
     <form
