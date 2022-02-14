@@ -7,6 +7,7 @@ import BaseTags from '../../molecules/BaseTags/BaseTags'
 import { CommonList } from '../../../api/types'
 import { TagItem } from '../../../api/v1/tags'
 import { PostItem } from '../../../api/v1/posts'
+import { formatCreatedAt } from '../../../utils/formatDate'
 
 type Props = {
   post: PostItem
@@ -23,10 +24,12 @@ const PostView: VFC<Props> = ({ post }) => {
     offset: 0,
     limit: 10,
   }
+
+  const orderedCreatedAt = formatCreatedAt(createdAt)
   return (
     <div className={wrapper}>
       <BaseHeading1 text={title} />
-      <BaseDate date={createdAt} />
+      <BaseDate date={orderedCreatedAt} />
       <BaseTags tags={orderedTags} />
       <BaseDescription body={content} />
     </div>
