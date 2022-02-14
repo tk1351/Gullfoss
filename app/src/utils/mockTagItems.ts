@@ -1,6 +1,6 @@
 import { TagItem } from '../api/v1/tags'
 
-const arrayLength = 12
+const arrayLength = 18
 const dummyArray = [...Array(arrayLength)].map((_, index) => String(index))
 
 export const generateMockTagItems = (date: string): TagItem[] => {

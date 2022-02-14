@@ -1,5 +1,5 @@
-import { FALink, Link } from '../types'
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { FALink, Link } from '../types'
 import { PostItem } from '../api/v1/posts'
 import { TagItem } from '../api/v1/tags'
 import { CommonList } from '../api/types'
