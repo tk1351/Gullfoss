@@ -1,5 +1,5 @@
 import { mockMethods } from 'aspida-mock'
-import { CommonItem, CommonList } from '../../types'
+import { CommonContentsQuery, CommonItem, CommonList } from '../../types'
 import { TagItem } from '../tags'
 import { mockPostItems } from '../../../lib'
 
@@ -14,6 +14,7 @@ export interface Methods {
   get: {
     status: 200
     resBody: CommonList<PostItem>
+    query?: CommonContentsQuery
   }
 }
 

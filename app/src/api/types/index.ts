@@ -12,3 +12,19 @@ export interface CommonList<T> {
   offset: number
   limit: number
 }
+
+export interface CommonContentsQuery {
+  draftKey?: string
+  limit?: number
+  orders?: string
+  q?: string
+  fields?: string
+  ids?: string
+  filters?: string
+  depth?: number
+}
+
+export type CommonContentQuery = Pick<
+  CommonContentsQuery,
+  'draftKey' | 'fields' | 'depth'
+>
