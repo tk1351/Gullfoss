@@ -3,6 +3,7 @@ import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { PostItem } from '../api/v1/posts'
 import { TagItem } from '../api/v1/tags'
 import { CommonList } from '../api/types'
+import { generateMockTagItems } from '../utils/mockTagItems'
 
 export const headerLinks: Link[] = [
   {
@@ -17,71 +18,17 @@ export const footerLinks: FALink[] = [
   { icon: faGithub, href: '#' },
 ]
 
-export const items: { title: string; date: string }[] = [
-  { title: 'post', date: '2022-01-01' },
-  { title: 'lorem', date: '2022-01-01' },
-  { title: 'ipsum', date: '2022-01-01' },
-  { title: 'angular', date: '2022-01-01' },
-  { title: 'react', date: '2022-01-01' },
-  { title: 'node.js', date: '2022-01-01' },
-  { title: 'python', date: '2022-01-01' },
-  { title: 'rust', date: '2022-01-01' },
-  { title: 'golang', date: '2022-01-01' },
-  { title: 'foo', date: '2022-01-01' },
-]
+const createdAt = '2022-02-10T22:18:26.390Z'
 
-export const tags: string[] = ['Angular', 'React', 'Vue', 'Svelte']
-
-export const mockTagItems: TagItem[] = [
-  {
-    id: 'react',
-    createdAt: '2022-01-01',
-    updatedAt: '2022-01-01',
-    publishedAt: '2022-01-01',
-    revisedAt: '2022-01-01',
-    tag: 'React',
-  },
-  {
-    id: 'docker',
-    createdAt: '2022-01-01',
-    updatedAt: '2022-01-01',
-    publishedAt: '2022-01-01',
-    revisedAt: '2022-01-01',
-    tag: 'Docker',
-  },
-  {
-    id: 'angular',
-    createdAt: '2022-01-01',
-    updatedAt: '2022-01-01',
-    publishedAt: '2022-01-01',
-    revisedAt: '2022-01-01',
-    tag: 'Angular',
-  },
-  {
-    id: 'vue',
-    createdAt: '2022-01-01',
-    updatedAt: '2022-01-01',
-    publishedAt: '2022-01-01',
-    revisedAt: '2022-01-01',
-    tag: 'Vue',
-  },
-  {
-    id: 'svelte',
-    createdAt: '2022-01-01',
-    updatedAt: '2022-01-01',
-    publishedAt: '2022-01-01',
-    revisedAt: '2022-01-01',
-    tag: 'Svelte',
-  },
-]
+export const mockTagItems: TagItem[] = generateMockTagItems(createdAt)
 
 export const mockPostItems: PostItem[] = [
   {
     id: 'lorem',
-    createdAt: '2022-01-01',
-    updatedAt: '2022-01-01',
-    publishedAt: '2022-01-01',
-    revisedAt: '2022-01-01',
+    createdAt: createdAt,
+    updatedAt: createdAt,
+    publishedAt: createdAt,
+    revisedAt: createdAt,
     title: 'lorem',
     subTitle: 'lorem',
     content: '<div>lorem</div>',
@@ -89,10 +36,10 @@ export const mockPostItems: PostItem[] = [
   },
   {
     id: 'ipsum',
-    createdAt: '2022-01-01',
-    updatedAt: '2022-01-01',
-    publishedAt: '2022-01-01',
-    revisedAt: '2022-01-01',
+    createdAt: createdAt,
+    updatedAt: createdAt,
+    publishedAt: createdAt,
+    revisedAt: createdAt,
     title: 'ipsum',
     subTitle: 'ipsum',
     content: '<div>ipsum</div>',
@@ -100,10 +47,10 @@ export const mockPostItems: PostItem[] = [
   },
   {
     id: 'dolor',
-    createdAt: '2022-01-01',
-    updatedAt: '2022-01-01',
-    publishedAt: '2022-01-01',
-    revisedAt: '2022-01-01',
+    createdAt: createdAt,
+    updatedAt: createdAt,
+    publishedAt: createdAt,
+    revisedAt: createdAt,
     title: 'dolor',
     subTitle: 'dolor',
     content: '<div>dolor</div>',
@@ -111,10 +58,10 @@ export const mockPostItems: PostItem[] = [
   },
   {
     id: 'sit',
-    createdAt: '2022-01-01',
-    updatedAt: '2022-01-01',
-    publishedAt: '2022-01-01',
-    revisedAt: '2022-01-01',
+    createdAt: createdAt,
+    updatedAt: createdAt,
+    publishedAt: createdAt,
+    revisedAt: createdAt,
     title: 'sit',
     subTitle: 'sit',
     content: '<div>sit</div>',
@@ -122,10 +69,10 @@ export const mockPostItems: PostItem[] = [
   },
   {
     id: 'amet',
-    createdAt: '2022-01-01',
-    updatedAt: '2022-01-01',
-    publishedAt: '2022-01-01',
-    revisedAt: '2022-01-01',
+    createdAt: createdAt,
+    updatedAt: createdAt,
+    publishedAt: createdAt,
+    revisedAt: createdAt,
     title: 'amet',
     subTitle: 'amet',
     content: '<div>amet</div>',
@@ -133,10 +80,10 @@ export const mockPostItems: PostItem[] = [
   },
   {
     id: 'consectetur',
-    createdAt: '2022-01-01',
-    updatedAt: '2022-01-01',
-    publishedAt: '2022-01-01',
-    revisedAt: '2022-01-01',
+    createdAt: createdAt,
+    updatedAt: createdAt,
+    publishedAt: createdAt,
+    revisedAt: createdAt,
     title: 'consectetur',
     subTitle: 'consectetur',
     content: '<div>consectetur</div>',
@@ -144,10 +91,10 @@ export const mockPostItems: PostItem[] = [
   },
   {
     id: 'adipiscing',
-    createdAt: '2022-01-01',
-    updatedAt: '2022-01-01',
-    publishedAt: '2022-01-01',
-    revisedAt: '2022-01-01',
+    createdAt: createdAt,
+    updatedAt: createdAt,
+    publishedAt: createdAt,
+    revisedAt: createdAt,
     title: 'adipiscing',
     subTitle: 'adipiscing',
     content: '<div>adipiscing</div>',
@@ -155,10 +102,10 @@ export const mockPostItems: PostItem[] = [
   },
   {
     id: 'elit',
-    createdAt: '2022-01-01',
-    updatedAt: '2022-01-01',
-    publishedAt: '2022-01-01',
-    revisedAt: '2022-01-01',
+    createdAt: createdAt,
+    updatedAt: createdAt,
+    publishedAt: createdAt,
+    revisedAt: createdAt,
     title: 'elit',
     subTitle: 'elit',
     content: '<div>elit</div>',
@@ -166,10 +113,10 @@ export const mockPostItems: PostItem[] = [
   },
   {
     id: 'aenean',
-    createdAt: '2022-01-01',
-    updatedAt: '2022-01-01',
-    publishedAt: '2022-01-01',
-    revisedAt: '2022-01-01',
+    createdAt: createdAt,
+    updatedAt: createdAt,
+    publishedAt: createdAt,
+    revisedAt: createdAt,
     title: 'aenean',
     subTitle: 'aenean',
     content: '<div>aenean</div>',
@@ -177,10 +124,10 @@ export const mockPostItems: PostItem[] = [
   },
   {
     id: 'tincidunt',
-    createdAt: '2022-01-01',
-    updatedAt: '2022-01-01',
-    publishedAt: '2022-01-01',
-    revisedAt: '2022-01-01',
+    createdAt: createdAt,
+    updatedAt: createdAt,
+    publishedAt: createdAt,
+    revisedAt: createdAt,
     title: 'tincidunt',
     subTitle: 'tincidunt',
     content: '<div>tincidunt</div>',
@@ -190,10 +137,10 @@ export const mockPostItems: PostItem[] = [
 
 export const mockItem: PostItem = {
   id: '12kfdjasdg',
-  createdAt: '2022-01-01',
-  updatedAt: '2022-01-01',
-  publishedAt: '2022-01-01',
-  revisedAt: '2022-01-01',
+  createdAt: createdAt,
+  updatedAt: createdAt,
+  publishedAt: createdAt,
+  revisedAt: createdAt,
   title: 'mock title',
   subTitle: 'mock sub title',
   content:
