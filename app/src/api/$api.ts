@@ -10,7 +10,7 @@ import { Methods as Methods2 } from './v1/tags'
 
 // prettier-ignore
 const api = <T>({ baseURL, fetch }: AspidaClient<T>) => {
-  const prefix = (baseURL === undefined ? 'undefined' : `${process.env.NEXT_PUBLIC_MICRO_CMS_API_URL}`).replace(/\/$/, '')
+  const prefix = (baseURL === undefined ? `${process.env.NEXT_PUBLIC_MICRO_CMS_API_URL}` : baseURL).replace(/\/$/, '')
   const PATH0 = '/v1/posts'
   const PATH1 = '/v1/tags'
   const GET = 'GET'
