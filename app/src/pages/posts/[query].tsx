@@ -8,10 +8,10 @@ import Head from 'next/head'
 import { client } from '../../api'
 import BaseHeader from '../../components/organisms/BaseHeader/BaseHeader'
 import BaseFooter from '../../components/organisms/BaseFooter/BaseFooter'
-import PostsPage from '../../components/pages/PostsPage/PostsPage'
+import SearchResultPage from '../../components/pages/SearchResultPage/SearchResultPage'
 import { footerLinks, headerLinks } from '../../lib'
 
-const query: NextPage<Props> = ({ posts, tags }) => {
+const query: NextPage<Props> = ({ posts, tags, query }) => {
   return (
     <div>
       <Head>
@@ -20,7 +20,7 @@ const query: NextPage<Props> = ({ posts, tags }) => {
       </Head>
       <main>
         <BaseHeader links={headerLinks} />
-        <PostsPage posts={posts} tags={tags} />
+        <SearchResultPage query={query} posts={posts} tags={tags} />
       </main>
 
       <BaseFooter links={footerLinks} />
@@ -43,7 +43,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   const tags = await client.v1.tags.$get()
 
   return {
-    props: { posts, tags },
+    props: { posts, tags, query },
     revalidate: 10,
   }
 }

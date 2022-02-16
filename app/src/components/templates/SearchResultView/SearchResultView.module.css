@@ -1,0 +1,8 @@
+.wrapper {
+    width: 100%;
+    min-height: 640px;
+    padding: 0 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+}
