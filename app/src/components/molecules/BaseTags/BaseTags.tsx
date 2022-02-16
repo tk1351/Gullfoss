@@ -16,7 +16,7 @@ const BaseTags: VFC<Props> = ({ tags }) => {
     <ul className={list}>
       {contents.map((content, index) => (
         <li key={index} className={tagItem}>
-          <Link href={`/category/${content.tag}`}>
+          <Link href={`/category/${content.id}`}>
             <a>
               <BaseTagButton label={content.tag} />
             </a>

@@ -1,19 +1,23 @@
 import { VFC } from 'react'
 import BaseHeading2 from '../../atoms/BaseHeading2/BaseHeading2'
 import BaseForm from '../../molecules/BaseForm/BaseForm'
-import BaseTags from '../../molecules/BaseTags/BaseTags'
 import BasePostList from '../../organisms/BasePostList/BasePostList'
-import { items, tags } from '../../../lib'
 import styles from './CategoryView.module.css'
+import { CommonList } from '../../../api/types'
+import { PostItem } from '../../../api/v1/posts'
 
-const CategoryView: VFC = () => {
+type Props = {
+  heading: string
+  posts: CommonList<PostItem>
+}
+
+const CategoryView: VFC<Props> = ({ heading, posts }) => {
   const { wrapper } = styles
   return (
     <div className={wrapper}>
-      <BaseHeading2 text={'React'} />
+      <BaseHeading2 text={heading} />
       <BaseForm />
-      <BaseTags tags={tags} />
-      <BasePostList items={items} posts />
+      <BasePostList items={posts} posts />
     </div>
   )
 }

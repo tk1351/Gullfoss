@@ -4,7 +4,7 @@ import api from './$api'
 import mock from './$mock'
 
 export const client =
-  process.env.NODE_ENV === 'production'
+  process.env.NODE_ENV === 'development'
     ? api(
         aspida(axios, {
           headers: {
