@@ -7,6 +7,7 @@ import BaseHeading2 from '../../atoms/BaseHeading2/BaseHeading2'
 import BaseForm from '../../molecules/BaseForm/BaseForm'
 import BaseTags from '../../molecules/BaseTags/BaseTags'
 import BasePostList from '../../organisms/BasePostList/BasePostList'
+import BaseNoContent from '../../organisms/BaseNoContent/BaseNoContent'
 
 type Props = {
   heading: string
@@ -21,7 +22,11 @@ const SearchResultView: VFC<Props> = ({ heading, posts, tags }) => {
       <BaseHeading2 text={heading} />
       <BaseForm />
       <BaseTags tags={tags} />
-      <BasePostList items={posts} posts />
+      {posts.totalCount ? (
+        <BasePostList items={posts} posts />
+      ) : (
+        <BaseNoContent />
+      )}
     </div>
   )
 }
