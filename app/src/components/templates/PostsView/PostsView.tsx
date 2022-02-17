@@ -4,6 +4,7 @@ import styles from './PostsView.module.css'
 import BaseForm from '../../molecules/BaseForm/BaseForm'
 import BaseTags from '../../molecules/BaseTags/BaseTags'
 import BasePostList from '../../organisms/BasePostList/BasePostList'
+import BasePagination from '../../molecules/BasePagination/BasePagination'
 import { CommonList } from '../../../api/types'
 import { PostItem } from '../../../api/v1/posts'
 import { TagItem } from '../../../api/v1/tags'
@@ -22,6 +23,7 @@ const PostsView: VFC<Props> = ({ heading, posts, tags }) => {
       <BaseForm />
       <BaseTags tags={tags} />
       <BasePostList items={posts} posts />
+      <BasePagination />
     </div>
   )
 }

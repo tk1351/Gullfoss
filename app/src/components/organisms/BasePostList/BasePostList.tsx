@@ -9,11 +9,11 @@ type Props = {
   posts?: boolean
 }
 
-const BasePostList: VFC<Props> = ({ items, posts }) => {
-  const { articleList, postsPage } = styles
+const BasePostList: VFC<Props> = ({ items }) => {
+  const { articleList } = styles
   const { contents } = items
   return (
-    <ul className={`${articleList} ${posts && postsPage}`}>
+    <ul className={`${articleList}`}>
       {contents.map((content, index) => (
         <BaseItem
           id={content.id}

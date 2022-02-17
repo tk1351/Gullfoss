@@ -1,0 +1,14 @@
+.pagination {
+    height: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list {
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+    color: #F3F4F6;
+}
