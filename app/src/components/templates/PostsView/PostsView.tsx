@@ -23,7 +23,7 @@ const PostsView: VFC<Props> = ({ heading, posts, tags }) => {
       <BaseForm />
       <BaseTags tags={tags} />
       <BasePostList items={posts} posts />
-      <BasePagination />
+      <BasePagination totalCount={posts.totalCount} />
     </div>
   )
 }

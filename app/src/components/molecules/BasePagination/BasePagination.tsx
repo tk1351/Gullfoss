@@ -1,36 +1,30 @@
 import { VFC } from 'react'
-import Link from 'next/link'
 import styles from './BasePagination.module.css'
+import { usePagination } from '../../../hooks/usePagination'
 
-const BasePagination: VFC = () => {
+type Props = {
+  totalCount: number
+}
+
+const BasePagination: VFC<Props> = ({ totalCount }) => {
   const { pagination, list } = styles
+
+  const { currentPage, totalPages, onForwardClicked, onBackClicked } =
+    usePagination(totalCount)
+
   return (
     <nav className={pagination}>
       <ul className={list}>
         <li>
-          <Link href='#'>
-            <a>prev</a>
-          </Link>
+          <button onClick={onBackClicked}>prev</button>
         </li>
         <li>
-          <Link href='#'>
-            <a>1</a>
-          </Link>
+          <p>
+            {currentPage} of {totalPages}
+          </p>
         </li>
         <li>
-          <Link href='#'>
-            <a>2</a>
-          </Link>
-        </li>
-        <li>
-          <Link href='#'>
-            <a>3</a>
-          </Link>
-        </li>
-        <li>
-          <Link href='#'>
-            <a>next</a>
-          </Link>
+          <button onClick={onForwardClicked}>next</button>
         </li>
       </ul>
     </nav>
