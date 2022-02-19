@@ -5,6 +5,8 @@ import { TagItem } from '../api/v1/tags'
 import { CommonList } from '../api/types'
 import { generateMockTagItems } from '../utils/mockTagItems'
 
+export const LIMIT_POSTS_DATA = 10
+
 export const headerLinks: Link[] = [
   {
     value: 'Home',

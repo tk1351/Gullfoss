@@ -16,6 +16,7 @@ export interface CommonList<T> {
 export interface CommonContentsQuery {
   draftKey?: string
   limit?: number
+  offset?: number
   orders?: string
   q?: string
   fields?: string

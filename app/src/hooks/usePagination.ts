@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useRecoilState } from 'recoil'
+import { currentPageState } from '../recoil/atoms/pagination'
 
 type ReturnUsePagination = {
   currentPage: number
@@ -12,7 +13,7 @@ export const usePagination = (totalCount: number): ReturnUsePagination => {
   const pageLimit = 10
   const totalPages = Math.ceil(totalCount / pageLimit)
 
-  const [currentPage, setCurrentPage] = useState(initialPage)
+  const [currentPage, setCurrentPage] = useRecoilState(currentPageState)
 
   const onForwardClicked = () => {
     if (currentPage === totalPages) return

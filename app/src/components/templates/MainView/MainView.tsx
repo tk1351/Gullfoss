@@ -17,7 +17,14 @@ const MainView: VFC<Props> = ({ heading, posts }) => {
     <div className={wrapper}>
       <BaseHeading2 text={heading} />
       <BasePostList items={posts} />
-      <BaseLink value='See more posts' href={'/posts'} state='morePosts' />
+      <BaseLink
+        value='See more posts'
+        href={{
+          pathname: '/posts',
+          query: { page: '1' },
+        }}
+        state='morePosts'
+      />
     </div>
   )
 }

@@ -4,9 +4,14 @@ import styles from './BaseLink.module.css'
 
 export type LinkState = 'navigation' | 'morePosts'
 
+type HrefObject = {
+  pathname: string
+  query: { [key in 'page' | 'query']?: string }
+}
+
 type Props = {
   value: string
-  href: string
+  href: string | HrefObject
   state: LinkState
   checked?: boolean
 }
