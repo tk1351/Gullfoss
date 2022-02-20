@@ -8,6 +8,7 @@ import BaseForm from '../../molecules/BaseForm/BaseForm'
 import BaseTags from '../../molecules/BaseTags/BaseTags'
 import BasePostList from '../../organisms/BasePostList/BasePostList'
 import BaseNoContent from '../../organisms/BaseNoContent/BaseNoContent'
+import BasePagination from '../../molecules/BasePagination/BasePagination'
 
 type Props = {
   heading: string
@@ -27,6 +28,7 @@ const SearchResultView: VFC<Props> = ({ heading, posts, tags }) => {
       ) : (
         <BaseNoContent />
       )}
+      {posts.totalCount && <BasePagination totalCount={posts.totalCount} />}
     </div>
   )
 }

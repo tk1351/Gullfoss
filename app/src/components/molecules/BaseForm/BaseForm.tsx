@@ -13,7 +13,7 @@ const BaseForm: VFC = () => {
     event.preventDefault()
     if (!query) return
     await router.push({
-      pathname: '/posts/[query]',
+      pathname: '/search/posts',
       query: { query },
     })
   }

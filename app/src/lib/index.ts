@@ -12,7 +12,7 @@ export const headerLinks: Link[] = [
     value: 'Home',
     href: '/',
   },
-  { value: 'Posts', href: '/posts' },
+  { value: 'Posts', href: { pathname: '/posts', query: { page: '1' } } },
 ]
 
 export const footerLinks: FALink[] = [

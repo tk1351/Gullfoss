@@ -1,13 +1,9 @@
 import { VFC } from 'react'
 import Link from 'next/link'
 import styles from './BaseLink.module.css'
+import { HrefObject } from '../../../types'
 
 export type LinkState = 'navigation' | 'morePosts'
-
-type HrefObject = {
-  pathname: string
-  query: { [key in 'page' | 'query']?: string }
-}
 
 type Props = {
   value: string

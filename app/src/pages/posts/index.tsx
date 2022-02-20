@@ -1,6 +1,6 @@
 import { InferGetStaticPropsType, NextPage } from 'next'
-import BaseHeader from '../../components/organisms/BaseHeader/BaseHeader'
 import Head from 'next/head'
+import BaseHeader from '../../components/organisms/BaseHeader/BaseHeader'
 import { footerLinks, headerLinks } from '../../lib'
 import BaseFooter from '../../components/organisms/BaseFooter/BaseFooter'
 import PostsPage from '../../components/pages/PostsPage/PostsPage'
