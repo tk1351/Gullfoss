@@ -5,6 +5,7 @@ import BasePostList from '../../organisms/BasePostList/BasePostList'
 import styles from './CategoryView.module.css'
 import { CommonList } from '../../../api/types'
 import { PostItem } from '../../../api/v1/posts'
+import BasePagination from '../../molecules/BasePagination/BasePagination'
 
 type Props = {
   heading: string
@@ -18,6 +19,7 @@ const CategoryView: VFC<Props> = ({ heading, posts }) => {
       <BaseHeading2 text={heading} />
       <BaseForm />
       <BasePostList items={posts} posts />
+      <BasePagination totalCount={posts.totalCount} />
     </div>
   )
 }
